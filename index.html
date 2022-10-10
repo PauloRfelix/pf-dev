@@ -6,14 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio|Paulo Felix</title>
     <link rel="stylesheet" href="css/style.css" class="css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112464574-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-112464574-1');
+    </script>
 </head>
 <body>
+    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaOnloadCallback&render=explicit" async defer></script>
+    <script>
+		var recaptchaObject = null;
+		var recaptchaOnloadCallback = function() {
+			if($('#contact-recaptcha').length > 0 && typeof grecaptcha !== "undefined"){
+				if($('#contact-recaptcha iframe').length < 1){
+					recaptchaObject = grecaptcha.render('contact-recaptcha', {
+						'sitekey' : '6LdtzscUAAAAAPSIrHt9dDtkTmiEdtwREsl9w4NA',
+						'callback' : function(response){
+							$('#contact-recaptcha > div iframe').removeAttr('style');
+						}
+					});
+				}else{
+					grecaptcha.reset(recaptchaObject);
+				}
+				
+				
+			}
+			
+		};
+		</script>
 <!--menu-->
     <header>
-        <div class="logo"></div><img src="" alt="">
-    </div>
-    <div class="menu">
-    </div>     
+        <nav class="containermenu">
+
+            <div class="logo"></div><img src="" alt="">
+            </div>
+            <div class="menu">
+                
+            </div> 
+        
+        </nav>     
     </header>
 
     <main>
@@ -22,46 +55,170 @@
         
         <div class="principal">            
             <section class="apresentação">
-                <div class="design-text" onclick="clicar()">
-                    <img src="img\bg_home_2.svg" alt="design">
-                </div>
-
-                <div class="minhafoto">
-                    <img srcset="img\pose 1x.png 1x, img\pose 2x.png 2x">
-                </div>            
-            
-                <div class="texto">
-                    <h3>PAULO FELIX</h3>
-                 <h1>Website and user <br> interface designer</h1>
-                    <p>Over the past 9 years, as an art director and designer, 
-                   I’ve worked <BR> with big companies and up-and-coming startups 
-                   to successfully <BR>help them reach their full potential and 
-                   attract new customers.</p>
-                </div>
+                <div class="design-text">
+                    <img src="assets/img/bg_home_2.svg" alt="design" class="design-svg">
+                </div>  
+                
+             <div class="bg-image">
+                <picture>
+                    <source srcset="assets\img\bg_home.png" media="max-width: 760px">
+                    <source srcset="assets\img\bg_home@2x.png" media="min-width: 761px">
+                    <img src="assets/img/bg_home.png" class="minha-foto">
+                </picture>
+            </div>
+                
+                <div class="sobremim">
+                    <div class="row">
                     
+                    <div class="main-copy">
+                    <h5>Paulo Felix</h5>
+                    <h1 class="large">UX designer & Web developer</h1>
+                    <h3 class="header-light">Com 10 anos de experiência em design gráfico, e graduando em publicidade e propaganda. Atuei em diversas áreas desde instituições públicas e privadas auxiliando-as a atingir seu máximo potencial.</h3>
+                    <nav class="links">
+                    <h4><a href="#portfolio" class="scroll-to special">Ver Projetos</a></h4>
+                    <span>ou</span>
+                    <h4><a href="www.behance.net/paulofelix" class="internal special" target="_blank">Ler Sobre Mim</a></h4>
+                    <a href="#portfolio" class="scroll-to toggle animate special">
+                        <div class="scroll-to-icon"></div>
+                        </a>    
+                    </nav>
+                    </div>
+                    </div>
+                    
+                    </div>
             </section>
 
         <!--Trabalhos realizados-->
 
-        <div class="projetos-esq">
+        <section class="home-portfolio" id="portfolio">
+            <div class="wrapper">
+            <div class="animate--me animate--init">
+            <h5>Trabalhos Realizados</h5>
+            <h1 class="large">Principais Projetos</h1>
+            </div>
+            <div class="list">
+            <div class="list-item-portfolio">
+            <a href="https://www.behance.net/gallery/152734773/IJFCast-o-podcast-de-protecao-a-vida" class="internal new animate--me animate--init" style="background-color: #0f0f0f;" data-page="PROJECT_BASICUX" target="_blank">
+            <i class="new dark-bg">new</i>
+            <svg viewBox="0 0 100 100" class="circle"><circle cx="50" cy="50" r="47" stroke-width="6"></circle></svg>
+            <div class="lazyload-wrapper loaded" style="padding-bottom:125.07462686567163%"><img alt="Basic UX" class="lazy initial loaded" src="assets\img\WhatsApp Image 2022-09-14 at 17.16.46.jpeg"></div>
+            <strong class="regular dark-bg">
+            <span class="h5">2022 — atual</span>
+            <span class="h2 with-badge">IJF Cast - o podcast do Instituto Dr. José Frota</span>
+            <span class="more with-icon"><p>Ver Projeto<span class="icon icon-arrow-link-thin icon--on-right"><svg><use xlink:href="#icon_arrow_link--thin"></use></svg></span></p></span>
+            </strong>
+            <strong class="action">
+            <span class="h5">2022 — atual</span>
+            <span class="h2 with-badge">IJF Cast - o podcast do Instituto Dr. José Frota</span>
+            <span class="more with-icon"><p>Ver Projeto<span class="icon icon-arrow-link-thin icon--on-right"><svg><use xlink:href="#icon_arrow_link--thin"></use></svg></span></p></span>
+            </strong>
+            </a>
+            </div>
+            <div class="list-item-portfolio">
+            <a href="https://github.com/PauloRfelix/1_html" class="internal animate--me animate--init" style="background-color: #21211e;" data-page="login" target="_blank">
+            <div class="lazyload-wrapper loaded" style="padding-bottom:125.07462686567163%"><img alt="telalogin" class="lazy initial loaded" src="assets\img\login.png"></div>
+            <strong class="regular dark-bg">
+            <span class="h5">2021</span>
+            <span class="h2">Tela de Login</span>
+            <span class="more with-icon"><p>Ver projeto<span class="icon icon-arrow-link-thin icon--on-right"><svg><use xlink:href="#icon_arrow_link--thin"></use></svg></span></p></span>
+            </strong>
+            <strong class="action">
+            <span class="h5">2021</span>
+            <span class="h2">Tela de Login</span>
+            <span class="more with-icon"><p>Ver projeto<span class="icon icon-arrow-link-thin icon--on-right"><svg><use xlink:href="#icon_arrow_link--thin"></use></svg></span></p></span>
+            </strong>
+            </a>
+            </div>
+            <div class="list-item-portfolio">
+            <a href="https://www.behance.net/gallery/134865521/Das-coisas-que-nao-te-contei" class="internal animate--me animate--init" style="background-color: #e6e6e6;" data-page="PROJECT_SYMOVA" target="_blank">
+            <div class="lazyload-wrapper loaded" style="padding-bottom:125.07462686567163%"><img alt="Symova" class="lazy initial loaded" src="assets\img\curta.png"></div>
+            <strong class="regular light-bg">
+            <span class="h5">2021</span>
+            <span class="h2">Das coisas que não te contei</span>
+            <span class="more with-icon"><p>Ver projeto<span class="icon icon-arrow-link-thin icon--on-right"><svg><use xlink:href="#icon_arrow_link--thin"></use></svg></span></p>
+            </span>
+            </strong>
+            <strong class="action">
+            <span class="h5">2021</span>
+            <span class="h2">Das coisa que não te contei</span>
+            <span class="more with-icon"><p>Ver projeto<span class="icon icon-arrow-link-thin icon--on-right"><svg><use xlink:href="#icon_arrow_link--thin"></use></svg></span></p></span>
+            </strong>
+            </a>
+            </div>
+            <div class="list-item-portfolio">
+            <a href="/" class="internal animate--me animate--init" style="background-color: #85868091;" data-page="PROJECT_PMR">
+            <div class="lazyload-wrapper loaded" style="padding-bottom:125.07462686567163%"><img alt="PMR" class="lazy initial loaded"></div>
+            <strong class="regular dark-bg">
+            <span class="h5">2022 — atual</span>
+            <span class="h2">Em breve</span>
+            <span class="more with-icon"><p><span class="icon icon-arrow-link-thin icon--on-right"><svg><use xlink:href="#icon_arrow_link--thin"></use></svg></span></p></span>
+            </strong>
+            <strong class="action">
+            <span class="h5">2022 — atual</span>
+            <span class="h2">Em breve</span>
+            <span class="more with-icon"><p><span class="icon icon-arrow-link-thin icon--on-right"><svg><use xlink:href="#icon_arrow_link--thin"></use></svg></span></p></span>
+            </strong>
+            </a>
+            </div>
+            </div>
+            </div>
+            </section>
 
+            <section class="quick-contact">
+                <div class="wrapper text-left-center animate--me animate--init">
+                <h5>Precisa de um designer?</h5>
+                <h1 class="large"><a href="https://api.whatsapp.com/send?phone=5585996080637&text=Ol%C3%A1%2C%20tudo%20bem.%20Preciso%20de%20um%20Designer." class="internal with-icon" target="_blank">Vamos trabalhar <span class="keep-together">juntos<span class="icon icon-arrow-link icon--on-right"><svg><use xlink:href="#icon_arrow_link"></use></svg></span></span></a></h1>
+                </div>
+                </section>
 
-        </div>
-
-        <div class="projetos-direita">
-
-
-        </div>
     </main>
+    
+  
+    
     <footer class="rodape">
 
     </footer>    
-    <script>
-        function clicar() {
-            var a = window.document.querySelector('div.design-text')
-            a.innerText = 'Clicou!'
-        }
+    <script src="script.js">
+        
     </script>
+
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
     
 </body>
 </html>
